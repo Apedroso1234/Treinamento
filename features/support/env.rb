@@ -3,6 +3,7 @@ require 'cucumber'
 require 'selenium-webdriver'
 require 'capybara'
 require 'capybara/cucumber'
+require 'pry'
 
 
 Capybara.register_driver :selenium do |app|
