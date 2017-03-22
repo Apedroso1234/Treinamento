@@ -17,7 +17,7 @@ end
 Entao(/^comparar cotação do Dolar se é menor que "([^"]*)"$/) do |cotacao|
 	@dolar = find(:xpath, '//*[@id="cambio"]/ul/li[1]/p[2]').text[9,15]
 	@dolar = @dolar.gsub(',','.') 
-	if @dolar.to_f <= cotacao.to_f
+	if @dolar.to_f <= cotacao.gsub(",",".").to_f
 	 	puts @dolar.to_f
 	else
 		puts "ERRO"
